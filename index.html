@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/normalize.css" media="screen">
+    <link rel="stylesheet" href="css/main.css" media="screen" charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Yatra+One" rel="stylesheet">
+    <title>Jose Frausto's Landing Page</title>
+  </head>
+  <body>
+    <img src="images/vs.jpg" alt="place_marker" />
+    <h1>Jose J. Frausto</h1>
+
+
+    <!--Span was used to define "variable" name!-->
+    <h2>Hi There Friend,<span id="greeting">hello!</span></h2>
+
+    <script language="JavaScript">
+    /* Variable date is set to Current Date */
+    var myDate = new Date();
+    /* hour is before noon (grabbing numerical value for actual time) */
+    if ( myDate.getHours() < 12 )
+    {
+        document.getElementById('greeting').innerHTML = "Good Morning!";
+    }
+    else  /* Hour is from noon to 5pm (actually to 5:59 pm) */
+    if ( myDate.getHours() >= 12 && myDate.getHours() <= 17 )
+    {
+        document.getElementById('greeting').innerHTML = "Good Afternoon!";
+    }
+    else  /* the hour is after 5pm, so it is between 6pm and midnight */
+    if ( myDate.getHours() > 17 && myDate.getHours() <= 24 )
+    {
+       document.getElementById('greeting').innerHTML = "Good Evening!";
+    }
+    else  /* the hour is not between 0 and 24, option for broken values */
+    {
+        document.getElementById('greeting').innerHTML = "It's probably party time!";
+    }
+     </script>
+  </body>
+</html>
